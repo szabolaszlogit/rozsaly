@@ -6,8 +6,8 @@ export default {
  
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - Zajta',
-    title: 'Zajta',
+    titleTemplate: '%s - Rozsály',
+    title: 'Rozsály',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -62,13 +62,13 @@ export default {
           success:'#4caf50'
           },
         dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          primary: '#03a9f4',
+          secondary: '#009688',
+          accent: '#00bcd4',
+          error: '#f44336',
+          warning: '#cddc39',
+          info: '#2196f3',
+          success: '#4caf50'
         }
       }
     }

@@ -8,7 +8,7 @@
   
   <v-card class="mb-5">
 
-    <v-card-title class="info">
+    <v-card-title class="secondary">
       <NuxtLink :to="{ name: 'slug', params: { slug: article.slug } }"
       style="word-break: break-word;"
      class="text-decoration-none display-5 v-heading  white--text font-weight-light">

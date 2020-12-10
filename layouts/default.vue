@@ -27,7 +27,7 @@
 v-for="(item, i) in items"
           :key="i"
           :to="item.to"
-          router               
+          router             
           exact>
  
         <v-list-item  
@@ -147,7 +147,7 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Zajta',
+          title: 'Rozsály',
           to: '/'
         },
         {
@@ -192,7 +192,7 @@ export default {
         {
           icon: 'mdi-file-document-multiple',
           title: 'Pályázatok',
-          to: '/inspire',
+          to: '',
           subLinks : [
             {
                 text : 'MFP-NHI/2019',
