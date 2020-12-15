@@ -5,6 +5,8 @@
       :clipped="clipped"
       fixed 
       app
+      width="auto"
+      height="100%"
     >
 <!-- close icon -->
    <v-card 
@@ -151,14 +153,130 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-castle',
+          icon: 'mdi-file-document-multiple',
+          title: 'Pályázatok',
+          to: '',
+          subLinks : [
+            {
+                text : 'ASP',
+                to    : '/palyazatok/asp',
+                icon  : 'mdi-arrow-right-drop-circle-outline'
+            },
+            {
+                text : 'MFP OUF/2019',
+                to    : '/MFP OUF2019',
+                icon  : 'mdi-arrow-right-drop-circle-outline'
+            }
+        ]
+        },
+        {
+          icon: 'mdi-chart-bubble',
           title: 'Községünkről',
-          to: '/about'
+          to: '/inspire',
+          subLinks : [
+            {
+                text : 'Rozsály',
+                to    : '/kozsegunkrol/about',
+                icon: 'mdi-castle',
+            },
+            {
+                text : 'Történelem',
+                to    : '/kozsegunkrol/tortenelem',
+            },
+            {
+                text : 'Látnivalók',
+                to    : '/kozsegunkrol/latnivalok',
+            },
+            {
+                text : 'Hírességek',
+                to    : '/kozsegunkrol/hiressegek',
+            },
+            {
+                text : 'Térképek',
+                to    : '/kozsegunkrol/terkepek',
+            }
+        ]
+               },
+        {
+          icon: 'mdi-chart-bubble',
+          title: 'Önkormányzat',
+          to: '/inspire',
+          subLinks : [
+            {
+                text : 'Önkormányzat',
+                to    : '/onkormanyzat/onkormanyzat',
+            },
+            {
+                text : 'Képviselőtestület',
+                to    : '/onkormanyzat/testulet',
+            },
+            {
+                text : 'Jegyző',
+                to    : '/onkormanyzat/jegyzo',
+            },
+            {
+                text : 'Hírességek',
+                to    : '/kozsegunkrol/hiressegek',
+            },
+            {
+                text : 'Térképek',
+                to    : '/kozsegunkrol/terkepek',
+            }
+        ]
+        },
+        {
+          title: 'Rendeletek',
+          to: '/inspire',
+          subLinks : [
+            {
+                text : 'Helyi adó',
+                to    : '/rendelet/helyiado',
+            },
+            {
+                text : 'Avar és hulladék égetés',
+                to    : '/rendelet/avaregetes',
+            },
+            {
+                text : 'Kérelem külterületi égetéshez',
+                to    : '/rendelet/kerelemegeteshez',
+            },
+            {
+                text : 'Eb összeíró lap, eb bejelentő lap',
+                to    : '/rendelet/ebbejelento',
+            }
+        ]
+        },
+        {
+          title: 'Intézmények',
+          to: '/inspire',
+          subLinks : [
+            {
+                text : 'Egészségügy',
+                to    : '/intezmenyek/egeszsegugy',
+            },
+            {
+                text : 'Idősek klubja',
+                to    : '/intezmenyek/idosekklubja',
+            },
+            {
+                text : 'Kérelem külterületi égetéshez',
+                to    : '/rendelet/kerelemegeteshez',
+            },
+            {
+                text : 'Eb összeíró lap, eb bejelentő lap',
+                to    : '/rendelet/ebbejelento',
+            }
+        ]
         },
         {
           icon: 'mdi-warehouse',
           title: 'Polgármesteri Hivatal',
           to: '/hivatal'
+        },
+        {
+          icon: 'mdi-warehouse',
+          title: 'Polgármesteri Hivatal',
+          to    : '/rendeletek/helyiado',
         },
         {
           icon: 'mdi-account-multiple',
@@ -189,25 +307,8 @@ export default {
             }
         ]
         },
-        {
-          icon: 'mdi-file-document-multiple',
-          title: 'Pályázatok',
-          to: '',
-          subLinks : [
-            {
-                text : 'MFP-NHI/2019',
-                to    : '/MFP-NHI2019',
-                icon  : 'mdi-arrow-right-drop-circle-outline'
-            },
-            {
-                text : 'MFP OUF/2019',
-                to    : '/MFP OUF2019',
-                icon  : 'mdi-arrow-right-drop-circle-outline'
-            }
-        ]
-        },
       ],
-      title: 'Zajta'
+      title: 'Rozsaly'
     }
   }
 }

@@ -11,7 +11,7 @@
       tile
     >
       <v-card-title class="success">
-        <strong class="subheading">Zajta</strong> 
+        <strong class="subheading">Rozsály</strong> 
         <v-spacer></v-spacer>
   
       </v-card-title>
