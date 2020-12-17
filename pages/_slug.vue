@@ -55,7 +55,8 @@
 
 <script>
   export default {
-    async asyncData({ $content, params }) {
+
+async asyncData({ $content, params }) {
       const article = await $content('', params.slug).fetch()
 
       return { article }

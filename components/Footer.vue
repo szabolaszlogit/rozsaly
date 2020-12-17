@@ -1,14 +1,17 @@
 <template>
+
+<v-container>
+    <v-row>
+        <v-col>
       <v-footer
     dark
     app
     padless
-    absolute
+    fixed
   >
     <v-card
       class="flex"
-      flat
-      tile
+    
     >
       <v-card-title class="success">
         <strong class="subheading">Rozsály</strong> 
@@ -22,6 +25,10 @@
       </v-card-text>
     </v-card>
   </v-footer>
+
+          </v-col>
+    </v-row>
+</v-container>
 </template>
 
 <script>

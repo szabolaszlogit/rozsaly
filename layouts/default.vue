@@ -1,12 +1,63 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer
+<!-- top menubar (app-bar) -->
+    <v-app-bar
+      :clipped-left="clipped"
+      flat
+      fixed
+      app
+      dark
+      color="#6A76AB"
+      shrink-on-scroll
+      :height="height"
+      src="/header.jpg"
+      fade-img-on-scroll
+      scroll-threshold="300"
+    >
+
+      <template v-slot:img="{ props }">
+        <v-img
+          v-bind="props"
+          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+        ></v-img>
+      </template>
+
+<!-- Nav icon -->
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-lg-none d-xl-flex"/>
+<!-- Nav title -->
+      <v-toolbar-title v-text="title"/>
+      <v-spacer />
+ <!--Top menu   -->
+<v-tooltip bottom>
+      <template v-slot:activator="{ on, attrs }">      
+       <v-btn icon  v-bind="attrs" v-on="on" href="https://www.facebook.com/rozsaly/" target="_blank">
+        <v-icon
+        x-large>mdi-facebook</v-icon>
+      </v-btn>     
+      </template>
+      <span>Facebook</span>
+</v-tooltip>
+
+
+<v-tooltip bottom>
+      <template v-slot:activator="{ on, attrs }">
+      <v-btn icon  v-bind="attrs" v-on="on"  href="https://www.youtube.com/user/Rozsaly" target="_blank">
+        <v-icon 
+        x-large>mdi-video</v-icon>
+      </v-btn>
+      </template>
+      <span>Youtube</span>
+</v-tooltip>
+
+    </v-app-bar>
+
+<v-card  >
+<v-navigation-drawer 
       v-model="drawer"
       :clipped="clipped"
-      fixed 
+      fixed
       app
       width="auto"
-      height="100%"
     >
 <!-- close icon -->
    <v-card 
@@ -74,68 +125,18 @@ v-for="(item, i) in items"
     </v-list>
 
     </v-navigation-drawer>
-
-<!-- top menubar (app-bar) -->
-    <v-app-bar
-      :clipped-left="clipped"
-      flat
-      fixed
-      app
-      dark
-      color="#6A76AB"
-      shrink-on-scroll
-      :height="height"
-      src="/header.jpg"
-      fade-img-on-scroll
-      scroll-threshold="500"
-    >
-
-      <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
-        ></v-img>
-      </template>
-
-<!-- Nav icon -->
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-lg-none d-xl-flex"/>
-<!-- Nav title -->
-      <v-toolbar-title v-text="title"/>
-      <v-spacer />
- <!--Top menu   -->
-<v-tooltip bottom>
-      <template v-slot:activator="{ on, attrs }">      
-       <v-btn icon  v-bind="attrs" v-on="on" href="https://www.facebook.com/rozsaly/" target="_blank">
-        <v-icon
-        x-large>mdi-facebook</v-icon>
-      </v-btn>     
-      </template>
-      <span>Facebook</span>
-</v-tooltip>
-
-
-<v-tooltip bottom>
-      <template v-slot:activator="{ on, attrs }">
-      <v-btn icon  v-bind="attrs" v-on="on"  href="https://www.youtube.com/user/Rozsaly" target="_blank">
-        <v-icon 
-        x-large>mdi-video</v-icon>
-      </v-btn>
-      </template>
-      <span>Youtube</span>
-</v-tooltip>
-
-    </v-app-bar>
+</v-card>
 
 <!-- Main content -->
     <v-main>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-main>
 
 <!-- Footer -->
-<Footer />
 
+<Footer />
   </v-app>
 </template>
 
@@ -160,24 +161,17 @@ export default {
             {
                 text : 'ASP',
                 to    : '/palyazatok/asp',
-                icon  : 'mdi-arrow-right-drop-circle-outline'
-            },
-            {
-                text : 'MFP OUF/2019',
-                to    : '/MFP OUF2019',
-                icon  : 'mdi-arrow-right-drop-circle-outline'
             }
         ]
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-warehouse',
           title: 'Községünkről',
           to: '/inspire',
           subLinks : [
             {
                 text : 'Rozsály',
                 to    : '/kozsegunkrol/about',
-                icon: 'mdi-castle',
             },
             {
                 text : 'Történelem',
@@ -215,18 +209,15 @@ export default {
                 to    : '/onkormanyzat/jegyzo',
             },
             {
-                text : 'Hírességek',
-                to    : '/kozsegunkrol/hiressegek',
+                text : 'Címlista',
+                to    : '/onkormanyzat/cimlista',
             },
-            {
-                text : 'Térképek',
-                to    : '/kozsegunkrol/terkepek',
-            }
         ]
         },
         {
           title: 'Rendeletek',
-          to: '/inspire',
+          to: '/inspire',          
+          icon  : 'mdi-arrow-right-drop-circle-outline',
           subLinks : [
             {
                 text : 'Helyi adó',
@@ -247,6 +238,7 @@ export default {
         ]
         },
         {
+          icon: 'mdi-account-multiple',
           title: 'Intézmények',
           to: '/inspire',
           subLinks : [
@@ -259,54 +251,62 @@ export default {
                 to    : '/intezmenyek/idosekklubja',
             },
             {
-                text : 'Kérelem külterületi égetéshez',
-                to    : '/rendelet/kerelemegeteshez',
-            },
-            {
-                text : 'Eb összeíró lap, eb bejelentő lap',
-                to    : '/rendelet/ebbejelento',
+                text : 'Szociális Központ',
+                to    : '/intezmenyek/roszak',
             }
         ]
         },
         {
-          icon: 'mdi-warehouse',
-          title: 'Polgármesteri Hivatal',
-          to: '/hivatal'
-        },
-        {
-          icon: 'mdi-warehouse',
-          title: 'Polgármesteri Hivatal',
-          to    : '/rendeletek/helyiado',
-        },
-        {
-          icon: 'mdi-account-multiple',
-          title: 'Képviselőtestület',
-          to: '/testulet'
-        },
-        {
-          title: 'Alapítvány',
-          to: '/alapitvany'
-        },
-        {
-        title: 'Egyesület',
-          to: '/egyesulet'
-        },
-        {
-        title: 'Településrendezési terv',
-          to: '/telepulesrendezesi'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Rendeletek',
+          icon: 'mdi-account-check-outline',
+          title: 'Oktatás, nevelés',
           to: '/inspire',
           subLinks : [
             {
-                text : 'Helyi adó (8/2009)',
-                to    : '/8-2009',
-                icon  : 'mdi-view-list'
+                text : 'Iskola',
+                to    : '/oktatas/iskola',
+            },
+            {
+                text : 'Óvoda',
+                to    : '/oktatas/ovoda',
             }
         ]
         },
+        {
+          icon: 'mdi-church',
+          title: 'Egyházak',
+          to: '/inspire',
+          subLinks : [
+            {
+                text : 'Görögkatolikus',
+                to    : '/egyhazak/katolikus',
+            },
+            {
+                text : 'Református',
+                to    : '/egyhazak/reformatus',
+            }
+        ]
+        },
+        {
+          icon: 'mdi-church',
+          title: 'Alapítvány',
+          to: '/inspire',
+          subLinks : [
+            {
+                text : 'Bemutatkozás',
+                to    : '/alapitvany/bemutatkozas',
+            }
+        ]
+        },
+        {
+          icon: 'mdi-account-group',
+          title: 'Kulturális egyesület',
+          to: '/egyesulet'
+          },
+        {
+          icon: 'mdi-run-fast',
+          title: 'Sportegyesület',
+          to: '/sportegyesulet'
+          },
       ],
       title: 'Rozsaly'
     }

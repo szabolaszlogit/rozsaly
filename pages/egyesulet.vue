@@ -1,43 +1,42 @@
 <template>
-  <v-card
-       class="mx-auto my-12">
-    <v-card-title>Vitéz Gaál Lajos Kulturális Egyesület</v-card-title>
+<v-container>
+    <v-row>
+        <v-col>
 
-    <v-card-text>
-<p>
-Levelezési cím:<br>
-4974, Zajta, Kossuth u. 14.<br><br>
+<v-card
+            color="#385F73"
+            dark
+          >
+            <v-card-title class="headline">
+             Hajnalpelika Kisszínpad Kulturális Egyesület
+            </v-card-title>
 
-Telefon:<br>
-06/44 369-344<br>
-06/70 3277391<br><br>
+            <v-card-subtitle>.</v-card-subtitle>
 
-Email:<br>
-husztineagi@freemail.hu<br>
-</p>
+            
+<v-card-text class="text--withe">
 
-<p>
-    
-Az egyesület célja:<br><br>
+ <p>Az egyesületet 2012 nyarán alapította 15, a térség kulturális fejlődéséért tenni akaró magánszemély. Hivatalosan 2012 őszén jegyezte be a bíróság a Hajnalpelika Kisszínpad Kulturális Egyesületet. Az egyesület alapszabályában foglalt fő célja a tagok és a művészeti vezető által meghatározott kulturális, művészeti tevékenység megvalósítása, valamint a kulturális és művészeti értékek terjesztése.
+Az egyesület független, civil szervezet, tagjai önkéntes munkában segítik a célok elérését.
+<br><br>
+A Hajnalpelika Kisszínpad Kulturális Egyesület fő feladatának tekinti a térség kulturális fejlődésének elősegítését, a kulturális lehetőségek színesítését. Ez a tevékenység túlmutat a szorosan vett előadóművészeteken: hozzájárul a települések népességmegtartó erejéhez, az elvándorlás megakadályozásához, a gyermekek szellemi fejlődéséhez, a népművészet által a hagyományok és a gyökerek megismeréséhez, merősítéséhez. Hangsúlyosan építünk a társadalmi aktivitásra, az emberek erőteljes együttműködésére.Az egyesület tagjai önkéntesen végzik vállalt feladataikat, a munkába bárki becsatlakozhat, semmilyen feltétel nincs.</p>               
 
-1.01 Vitéz Gaál Lajos szellemi örökségének ápolása, vele kapcsolatos tárgyi emlékek felkutatása, megőrzése, megismertetése. Sírhelyének gondozása, tiszteletére állított emlékoszlop állagmegóvása.
-<br>1.02 A település, a régió kulturális hagyományainak, értékeinek megőrzése és továbbadása a felnövekvő generációknak.
-<br>1.03 A magyar és a sváb népi kultúra, néphagyomány (néptánc, népzene, népdal) felkutatása, megismerése, ápolása, színpadi bemutatása.
-<br>1.04 A néptánc és népzene széles körben történő megismertetése, táncházak szervezése.
-<br>1.05 A szabadidő kulturális célú eltöltéséhez korhatár nélküli programok szervezése, a színvonalas szórakozás feltételeinek biztosítása.
-<br>1.06 A zajtai kórus, tánccsoport és színjátszó kör támogatása, a csoportok kosztümtárának bővítése
-<br>1.07 Színpadi fény-és hangtechnikai eszközök, díszletek beszerzésének elősegítése.
-<br>1.08 A hasonló célokkal létrejött bel-és külföldi egyesületekkel, együttesekkel, zenekarokkal történő határ menti együttműködések kiépítése, ápolásának támogatása, vendégszereplések megvalósítása, vendég együttesek és zenekarok fogadása.
-<br>1.09 Filmek, televíziós műsorok készítése.
-<br>1.10 Történelmi, helytörténeti ismeretek terjesztése, ehhez kapcsolódó programok szervezése.
-<br>1.11 Szervezetünk szerepet kíván vállalni, aktívan közreműködni a regionális kulturális és egyéb események megvalósításában, nemzetközi kulturális programcserékben, a magyar és a német kultúra országhatáron túlnyúló népszerűsítésében.
-<br>1.12 A táji és a tárgyi környezet védelme, az egészséges, tiszta és esztétikus lakókörnyezet kialakítása, megőrzése.
-</p>
+<v-btn
+color="primary"
+href="https://www.facebook.com/hajnalpelika" target="_blank"
+>Facebook</v-btn>
+
+<v-btn
+color="primary"
+href="http://www.hajnalpelika.hu/" target="_blank"
+>Weboldal</v-btn>
+</v-card-text>             
+ </v-card>
 
 
-    </v-card-text>
-
-  </v-card>
+        </v-col>
+    </v-row>
+</v-container>
 </template>
 
 <script>
