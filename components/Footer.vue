@@ -20,8 +20,8 @@
       </v-card-title>
 
       <v-card-text class="py-2 white--text">
-        <nuxt-link to="adatvedelem" class="mr-5">Adatvédelmi tájékoztató</nuxt-link>
-        <nuxt-link to="cookie">Sütitájékoztató</nuxt-link>
+        <nuxt-link to="/adatvedelem" class="mr-5">Adatkezeléasi tájékoztató</nuxt-link>
+        <nuxt-link to="/cookie">Sütitájékoztató</nuxt-link>
       </v-card-text>
     </v-card>
   </v-footer>

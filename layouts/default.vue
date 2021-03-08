@@ -159,7 +159,7 @@ export default {
           to: '',
           subLinks : [
             {
-                text : 'Erdőháti Bölcsőd',
+                text : 'Erdőháti Bölcsőde',
                 to    : '/palyazatok/top141-19',
             },
             {
@@ -169,6 +169,10 @@ export default {
             {
                 text : 'MFP-NHI/2019',
                 to    : '/palyazatok/mfpnhi2019',
+            },
+            {
+                text : 'MFP-AEE/2020',
+                to    : '/palyazatok/mfpaee2020',
             }
         ]
         },
