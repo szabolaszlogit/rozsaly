@@ -173,6 +173,10 @@ export default {
             {
                 text : 'MFP-AEE/2020',
                 to    : '/palyazatok/mfpaee2020',
+            },
+            {
+                text : 'MFP-SZL/2019',
+                to    : '/palyazatok/mfpszl2019',
             }
         ]
         },
